@@ -53,4 +53,4 @@ require (
 	gopkg.in/square/go-jose.v2 v2.1.9 // indirect
 )
 
-replace golang.org/x/oauth2 => github.com/Ompluscator/oauth2 v0.0.0-20190121141151-b76268579942
+// replace golang.org/x/oauth2 => github.com/Ompluscator/oauth2 v0.0.0-20190121141151-b76268579942
