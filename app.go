@@ -81,7 +81,7 @@ func serveProvider(a *appmodule, logger flamingo.Logger) *cobra.Command {
 }
 
 func (a *appmodule) listenAndServe() error {
-	a.eventRouter.Dispatch(context.Background(), &flamingo.ServerStartEvent{})
+	a.eventRouter.Dispatch(context.Background(), &flamingo.ServerStartEvent{Port: a.server.Addr})
 	defer a.eventRouter.Dispatch(context.Background(), &flamingo.ServerShutdownEvent{})
 
 	err := a.server.ListenAndServe()
